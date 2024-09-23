@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Al's Hotel Reservation Form</title>
+    <link rel="stylesheet" href="Al_CCS.css">
+</head>
+<body>
+    <h1>Al's Hotel Reservation Form</h1>
+    <form>
+        <div class="form-container">
+            <div class="guest-info">
+            <fieldset>
+                <legend>Guest Information</legend>
+                <label for="name">Full Name*:</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+                <label for="email">Email*:</label>
+                <input type="email" id="name" name="name"placeholder="guest@email.com" required><br>
+            </fieldset>
+            </div>
+            <div class="room-info">
+                <fieldset>
+                    <legend> Room Information</legend>
+                    <label for="room">Room Type*:</label>
+                    <select id="room" name="room" required>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                    </select><br>
+                </fieldset>
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+            <button type="button"onclick="window.close()">Exist</button>
+        </div>
+    </form>
+</body>
+</html>

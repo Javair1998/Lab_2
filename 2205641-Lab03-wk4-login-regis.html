@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al's Hotel Login and Registration</title>
+    <link rel="stylesheet" href="Al_CCS.css"> 
+</head>
+<body>
+    <h1>Login & Register Form</h1>
+    <form>
+        <fieldset>
+            <legend>Guest Information</legend>
+
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" placeholder="guest@email.com" required><br>
+            <label for="password">Password*:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Room Detail</legend>
+            <label for="room">Room Type*:</label>
+            <select id="room" name="room" required> 
+                <option value="">Select Room Type</option> 
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select><br>
+        </fieldset>
+        <button type="submit" disabled id="registerBtn">Register</button>
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('input', function () {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const room = document.getElementById('room').value;
+            document.getElementById('registerBtn').disabled = !(email && password && room);
+        });
+    </script>
+</body>
+</html>
